@@ -1,0 +1,14 @@
+Layout/IndentationWidth:
+  Width: 4
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false

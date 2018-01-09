@@ -1,0 +1,16 @@
+require 'givepulse/version'
+require 'givepulse/client'
+require 'givepulse/connection'
+require 'givepulse/resource'
+
+require 'givepulse/resources/users'
+require 'givepulse/resources/impacts'
+require 'givepulse/resources/affiliations'
+require 'givepulse/resources/education'
+require 'givepulse/resources/events'
+require 'givepulse/resources/impacts'
+require 'givepulse/resources/groups'
+require 'givepulse/resources/registrations'
+require 'givepulse/resources/memberships'
+
+require 'givepulse/exceptions/unsupported_method'
