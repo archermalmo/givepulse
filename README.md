@@ -46,13 +46,13 @@ Using the client object follows an API like this
 affiliations = @client.affiliations.get
 
 new_affiliation = @client.affiliations.create({
-    group1_id: '12345',
-    group2_id: '12346',
-    notify: 'yes'
+    'group1_id' => '12345',
+    'group2_id' => '12346',
+    'notify' => 'yes'
 })
 
 updated_affiliation = @client.affiliations.update(12345, {
-    approve: 'yes'
+    'approve' => 'yes'
 })
 
 deleted_affiliation = @client.affiliations.delete(12345)
@@ -64,7 +64,7 @@ You can add filter and search data to GET requests by passing in Ruby objects to
 
 ```ruby
 admin_users = @client.users.get({
-    role: 'admin'
+    'role' => 'admin'
 })
 ```
 
