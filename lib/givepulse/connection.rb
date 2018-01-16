@@ -61,7 +61,7 @@ module Givepulse
             return if options.nil?
             query_parameters = []
             options.each do |key, value|
-                query_parameters.push("#{CGI.escape(key)}=#{CGI.escape(value)}")
+                query_parameters.push("#{CGI.escape(key.to_s)}=#{CGI.escape(value.to_s)}")
             end
             query_parameters.join('&')
         end
