@@ -2,6 +2,7 @@ require 'cgi'
 require 'base64'
 require 'givepulse/connection'
 require 'givepulse/resource_map'
+require 'pry'
 
 module Givepulse
     # Class that will call any methods for retrieving data from the Givepulse API
@@ -48,11 +49,18 @@ module Givepulse
 
         def authorized?
             return false unless @authorization_expiration
+            # Reset the authorization token if it's expired
+            @connection.authorization_token = nil if Time.now < @authorization_expiration
             Time.now < @authorization_expiration
         end
 
         def method_missing(method_name, *args, &block)
-            Givepulse::ResourceMap.get_resource_class(method_name).new(self) || super
+            resource_class = Givepulse::ResourceMap.get_resource_class(method_name)
+            if resource_class
+                resource_class.new(self)
+            else
+                super
+            end
         end
 
         def respond_to_missing?(method_name, include_private = false)

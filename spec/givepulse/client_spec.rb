@@ -68,6 +68,12 @@ RSpec.describe Givepulse::Client do
                 expect(@givepulse.authorized?).to eq(false)
             end
         end
+
+        it 'should re-authorize successfully' do
+            Timecop.freeze(Time.now + (60 * 60 * 2) + 1) do
+                expect(@givepulse.authorize!).to eq(true)
+            end
+        end
     end
 
     context 'when authorization has not expired' do
