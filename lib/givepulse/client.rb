@@ -50,7 +50,7 @@ module Givepulse
         def authorized?
             return false unless @authorization_expiration
             # Reset the authorization token if it's expired
-            @connection.authorization_token = nil if Time.now < @authorization_expiration
+            @connection.authorization_token = nil if Time.now > @authorization_expiration
             Time.now < @authorization_expiration
         end
 
