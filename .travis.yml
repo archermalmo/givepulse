@@ -1,5 +1,14 @@
-sudo: false
 language: ruby
 rvm:
-  - 2.4.0
-before_install: gem install bundler -v 1.15.4
+- 2.0.0
+- 1.9.3
+- jruby-19mode
+- rbx-2
+deploy:
+  provider: rubygems
+  api_key:
+    secure: "jpmxB5caLFmpIhxrqKvGgZksdJugsy6A07XfuiGLvdBb/kBrfOtel+CU3gGeQS5WioGLnIo6J+SMGmP6TSiRPhE823FzYMtsfNAaxPLKOQVFzMAjf6TXivxwixCvjZfO+FFwJy+TV9Z1oaFiafpv9JX1tO/7OSl8cqQtOz1GqhYvqocY/acWcOLlw0efbWCdGOHMVkkm4DXAThnXItJkCE9xOzWTwQoeoNrWp9/ocpKncxNgqYRUmVi/KisGrfPOMqR7hWQMRh7bQdwXYzZ+EDRgWhZWM5ntmQYugJJjSC0dlL+bqv0LdoYx4ML87iqjCj5O3SGkWOp3AO+S0FjdTY79TehcCkNqfbj9bId1/f0kivWR/BDrwdfcYFn6DImnxuKlHB0WHnjaf7c+3OBzkU8jQCE48+ISCZrTSAEWHy8yBhwowLPqF6sBhW2U5jU8YloYR8wbnF4rYiiOJ3FmYJIamIBc1GJNgvGJt1np+ItFcCo+/bVDYtZXON2OD0CiVn0qfToT2NmmNMR9Fj4ruBjEvciBllrIBuclnO3FNDNsLWOnb8RAe1z+bdO5p2/0osLiBYi5iM8GR3hmVjjIkjgRt6Afvh7q8J5NNZby2L7HOcMFbgpzs1G+g3ly2diFjq3y4xkvQ4L3ufFHgJfWBjR55qqc9HrMjr4xF6W/DUk="
+  gem: givepulse
+  on:
+    tags: true
+    repo: archermalmo/givepulse
