@@ -7,7 +7,7 @@ This gem is a wrapper library around Givepulse's API providing a simple set of R
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'givepulse-rb'
+gem 'givepulse'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install givepulse-rb
+    $ gem install givepulse
 
 ## Usage
 
@@ -96,7 +96,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/archermalmo/givepulse-rb.
+Bug reports and pull requests are welcome on GitHub at https://github.com/archermalmo/givepulse.
 
 ## License
 
