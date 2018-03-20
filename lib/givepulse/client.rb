@@ -2,7 +2,6 @@ require 'cgi'
 require 'base64'
 require 'givepulse/connection'
 require 'givepulse/resource_map'
-require 'pry'
 
 module Givepulse
     # Class that will call any methods for retrieving data from the Givepulse API
